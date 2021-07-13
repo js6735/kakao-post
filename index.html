@@ -29,7 +29,8 @@
     }
 
     function postMessageToiOS(postData) {
-        window.parent.postMessage({ message: this.state.message }, '*');
+      console.log(postData);
+//         window.parent.postMessage({ message: postData }, '*');
     }
 
     var element_layer = document.getElementById('layer');
