@@ -20,17 +20,8 @@
       console.log("onReceivedPostMessage "+event);
     }
 
-    function onReceivedActivityMessageViaJavascriptInterface(json){
-      //..ex deconstruct data into action & params
-      var data = JSON.parse(json);
-      var action = data.action;
-      var params = data.params;
-      console.log("onReceivedActivityMessageViaJavascriptInterface "+event);
-    }
-
     function postMessageToiOS(postData) {
-      console.log(postData);
-//         window.parent.postMessage({ message: postData }, '*');
+        window.parent.postMessage({ message: postData }, '*');
     }
 
     var element_layer = document.getElementById('layer');
